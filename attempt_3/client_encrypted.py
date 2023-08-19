@@ -24,7 +24,13 @@ def setup(u, p):
         client.send(rsa.encrypt(p.encode(), public_partner))
         #recieves login success or fail and decrypts it using private key of client and decodes it from bytes to string
         # print(rsa.decrypt(client.recv(1024), private_key).decode())
-        if rsa.decrypt(client.recv(1024), private_key).decode() == "login successful":
-            with open("access_granted.py") as f:
+        server_response = rsa.decrypt(client.recv(1024), private_key).decode()
+        if server_response == "login successful":
+        # if rsa.decrypt(client.recv(1024), private_key).decode() == "login successful":
+            with open("access_granted.py", 'r') as f:
                 exec(f.read())
+            print(server_response)
+            #grant access and close gui *wip
+        else:
+            print(server_response)
     server_comm(u, p)
