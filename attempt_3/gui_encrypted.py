@@ -1,7 +1,7 @@
 #imports tkinter and customtkinter
 import tkinter as tk
 import customtkinter as ct
-import client_attempt_2_encrypted as ca2
+import client_encrypted as ca2
 #sets the default color theme to dark-blue
 ct.set_default_color_theme('dark-blue')
 #sets the default appearance mode to dark
