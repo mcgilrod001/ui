@@ -17,7 +17,7 @@ def login():
     ca2.setup(u=entry1.get(), p=entry2.get())
 #test forgot login details function (will be replaced with a real forgot login details function)
 def forgor():
-    print("ha ha fuck you")
+    print("ha ha")
 #creates a frame in the root window
 frame = ct.CTkFrame(master=root)
 #packs the frame with pad and fill
